@@ -12,9 +12,12 @@ var CurrencyConverter = function (number, fromCurrency, toCurrency, currencyExch
     };
     /* End - Configured Predefined Exchange Rates */
     for (var indexfromCurrency in objExchangeRate) {
+        console.log(indexfromCurrency);
         var objPredefinedExchangeRate = objExchangeRate[indexfromCurrency];
+        console.log(objPredefinedExchangeRate);
         if (this.fromCurrency == indexfromCurrency) {
             for (var indextoCurrency in objPredefinedExchangeRate) {
+                console.log(indextoCurrency)
                 if (this.toCurrency == indextoCurrency) {
                     this.predefinedExchangeRate = currencyExchangeRate ||
                         objPredefinedExchangeRate[indextoCurrency];
